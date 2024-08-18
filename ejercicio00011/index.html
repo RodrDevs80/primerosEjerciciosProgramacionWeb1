@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(36, 32, 32);
+            color: #fff;
+            text-align: center;
+        }
+
+        .contenedor {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 1.5rem;
+        }
+
+        #temperatura {
+            width: 25%;
+            height: 40px;
+            font-size: 1.6rem;
+        }
+
+        .contenedor button,
+        #btn-reset {
+            width: 20%;
+            height: 40px;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .contenedor button:hover,
+        #btn-reset:hover {
+            background-color: black;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        select {
+            padding: 10px;
+        }
+
+        select {
+            font-weight: 900;
+        }
+
+        .ocultar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 11:Convertir Temperatura</h1>
+    <div class="contenedor">
+        <label for="temperatura">Ingrese la Temperatura en grados</label>
+        <select name="tipo" id="tipo-inicial">
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Celsius">Celsius</option>
+        </select>
+        <input type="number" id="temperatura">
+        <select name="tipo" id="tipo-a-convertir">
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Celsius">Celsius</option>
+        </select>
+        <button id="btn-convertir">Convertir</button>
+        <button id="btn-reset" class="ocultar">Reset</button>
+    </div>
+    <div id="resultado"></div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
